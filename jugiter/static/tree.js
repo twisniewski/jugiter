@@ -30,6 +30,9 @@ define([
                             'add_dir': window.location.pathname,
                             'gitrepo': $('#gitrepo').val()
                         });
+                        new sessionlist.SesssionList($.extend({
+                            events: events
+                        })).load_sessions();
                     }
                 },
                 'Cancel': {
